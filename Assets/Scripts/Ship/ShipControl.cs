@@ -7,9 +7,9 @@ public class ShipControl : MonoBehaviour
 {
     private enum Actions : uint
     {
-        INTERACT,
         THRUST,
         ROTATE,
+        ROTATE_INVERTED,
         ACTION_NUM
     }
 
@@ -33,6 +33,14 @@ public class ShipControl : MonoBehaviour
         ActionState state = Controls[(int) Actions.THRUST];
         state.Unlocked = true;
         Controls[(int) Actions.THRUST] = state;
+
+        state = Controls[(int) Actions.ROTATE];
+        state.Unlocked = true;
+        Controls[(int) Actions.ROTATE] = state;
+
+        state = Controls[(int) Actions.ROTATE_INVERTED];
+        state.Unlocked = true;
+        Controls[(int) Actions.ROTATE_INVERTED] = state;
     }
 
     private void Awake()
@@ -106,14 +114,16 @@ public class ShipControl : MonoBehaviour
     {
         switch(action)
         {
-            case Actions.INTERACT:
-                break;
-
             case Actions.THRUST:
                 m_ShipPhysics.SetThrust(true);
                 break;
 
             case Actions.ROTATE:
+                m_ShipPhysics.SetRotate(true);
+                break;
+
+            case Actions.ROTATE_INVERTED:
+                m_ShipPhysics.SetRotateInverted(true);
                 break;
 
             default :
@@ -126,14 +136,16 @@ public class ShipControl : MonoBehaviour
     {
         switch(action)
         {
-            case Actions.INTERACT:
-                break;
-
             case Actions.THRUST:
                 m_ShipPhysics.SetThrust(false);
                 break;
 
             case Actions.ROTATE:
+                m_ShipPhysics.SetRotate(false);
+                break;
+
+            case Actions.ROTATE_INVERTED:
+                m_ShipPhysics.SetRotateInverted(false);
                 break;
 
             default :
