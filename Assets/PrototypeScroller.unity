@@ -665,7 +665,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c69637e050884d9a95c85d42892a00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0
+  m_scrollSpeed: 0
+  m_directionX: 1
+  m_directionY: 1
 --- !u!23 &1145070504
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -931,7 +933,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c69637e050884d9a95c85d42892a00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.5
+  m_scrollSpeed: 0.5
+  m_directionX: 0
+  m_directionY: 0
 --- !u!23 &1661737283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1153,7 +1157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c69637e050884d9a95c85d42892a00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.2
+  m_scrollSpeed: 0.3
+  m_directionX: 0
+  m_directionY: 0
 --- !u!1 &2055221637
 GameObject:
   m_ObjectHideFlags: 0
